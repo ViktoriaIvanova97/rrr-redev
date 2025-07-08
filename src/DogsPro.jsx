@@ -34,7 +34,6 @@ const DogsPro = () => {
           );
           const response = await res.json();
           setImg(response.message);
-          setCount((prev) => prev + 1);
         } else {
           const res = await fetch(
             `https://dog.ceo/api/breed/${selectedBreed}/images/random/${countBreed}`
