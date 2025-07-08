@@ -11,6 +11,7 @@ const DogsPro = () => {
   const [count, setCount] = useState(0);
   const inputRef = useRef(null);
   const [countBreed, setCountBreed] = useState(3);
+  const isFirstRun = useRef(true);
 
   useEffect(() => {
     const getData = async () => {
@@ -28,12 +29,17 @@ const DogsPro = () => {
   useEffect(() => {
     const getOneBreed = async () => {
       try {
-        if (selectedBreed === "all" || selectedBreed === "") {
+        if (isFirstRun.current) {
+          isFirstRun.current = false; 
+          return;
+        } else if (selectedBreed === "all" || selectedBreed === "") {
           const res = await fetch(
             `https://dog.ceo/api/breeds/image/random/${countBreed}`
           );
           const response = await res.json();
           setImg(response.message);
+          setCount((prev) => prev + 1);
+          console.log("all");
         } else {
           const res = await fetch(
             `https://dog.ceo/api/breed/${selectedBreed}/images/random/${countBreed}`
@@ -41,6 +47,7 @@ const DogsPro = () => {
           const response = await res.json();
           setImg(response.message);
           setCount((prev) => prev + 1);
+          console.log("some");
         }
       } catch (error) {
         console.log(error);
