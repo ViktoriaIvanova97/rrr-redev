@@ -10,6 +10,7 @@ const MyComp = () => {
   const [count2, setCount2] = useState(3);
   const inputRef = useRef(null);
   const [update, setUpdate] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
   const getData = async () => {
     try {
@@ -23,6 +24,7 @@ const MyComp = () => {
       } else {
         setCount((val) => val + 1);
       }
+      setIsLoading(false);
     } catch (e) {
       console.log(e);
     }
@@ -34,10 +36,10 @@ const MyComp = () => {
     }
   }, [count2, update]);
 
-	const handleInput = () => {
-		const num = parseInt(inputRef.current.value);
-		setCount2(num);
-	}
+  const handleInput = () => {
+    const num = parseInt(inputRef.current.value);
+    setCount2(num);
+  };
 
   const handleUpdateClick = () => {
     setUpdate((val) => val + 1);
@@ -51,8 +53,9 @@ const MyComp = () => {
         inputRef={inputRef}
         onRefresh={handleInput}
         onUpdate={handleUpdateClick}
+        setIsLoading={setIsLoading}
       />
-      <ImageGallery images={state} />
+      {isLoading ? <>Загрузка...</> : <ImageGallery images={state} />}
     </>
   );
 };
