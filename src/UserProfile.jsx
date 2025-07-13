@@ -24,20 +24,28 @@ const UserProfile = () => {
   };
 
   return (
-    <>
+    <div
+      style={{
+        border: "2px solid #0000006b",
+        borderRadius: "8%",
+        padding: "10px",
+        margin: "10px",
+        display: "grid",
+        justifyItems: "center",
+      }}
+    >
+      <h3>Профиль пользователя</h3>
       <div>
-        <p>{user.name}</p>
+        <p>Имя: {user.name}</p>
+        <p>Врзраст: {user.age}</p>
+        <p>Активен: {user.isActive ? "да" : "нет"}</p>
+      </div>
+      <div style={{ display: "grid", gap: "10px" }}>
         <button onClick={changeName}>Сменить имя</button>
-      </div>
-      <div>
-        <p>{user.age}</p>
         <button onClick={changeAge}>Увеличить возраст</button>
-      </div>
-      <div>
-        <p>{JSON.stringify(user)}</p>
         <button onClick={changeActive}>Переключить активность</button>
       </div>
-    </>
+    </div>
   );
 };
 

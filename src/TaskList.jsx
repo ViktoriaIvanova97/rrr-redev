@@ -10,20 +10,32 @@ const TaskList = () => {
       setTasks((prev) => [...prev, newTask]);
     }
   };
-console.log(tasks);
+  console.log(tasks);
   const deleteTask = () => {
     setTasks((prev) => prev.filter((el, index) => index !== prev.length - 1));
   };
   return (
-    <>
-      <button onClick={addTask}>Добавить задачу</button>
-      <button onClick={deleteTask}>Удалить последнюю задачу</button>
+    <div
+      style={{
+        border: "2px solid #0000006b",
+        borderRadius: "8%",
+        padding: "10px",
+        margin: "10px",
+        display: "grid",
+        justifyItems: "center",
+      }}
+    >
+      <h3>Список задач</h3>
       <ul>
         {tasks.map((el) => (
           <li>{el}</li>
         ))}
       </ul>
-    </>
+      <div style={{ display: "grid", gap: "10px" }}>
+        <button onClick={addTask}>Добавить задачу</button>
+        <button onClick={deleteTask}>Удалить последнюю задачу</button>
+      </div>
+    </div>
   );
 };
 

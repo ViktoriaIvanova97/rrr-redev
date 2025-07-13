@@ -34,7 +34,11 @@ const BasketOfGoods = () => {
       {cart.map((el) => (
         <div
           key={el.id}
-          style={{ display: "flex", justifyContent: "space-between" }}
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            gap: "10px",
+          }}
         >
           <p>
             {el.title} (Кол-во : {el.count})
