@@ -1,31 +1,44 @@
-import { useState } from "react";
+import { useState, useRef, useMemo } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import LifecycleComponent from "./LifecycleComponent";
-import LifecycleComponent2 from "./LifecycleComponent2";
-
+import List from "./List";
 
 function App() {
-  const [state, setState] = useState(1);
-  const [state2, setState2] = useState(0);
+  const [value, setValue] = useState([
+    "яблоко",
+    "банан",
+    "киви",
+    "груша",
+    "апельсин",
+  ]);
+  const inputRef = useRef(null);
+
+  const valid = () => {
+    inputRef.current.focus();
+  };
+
+  const changeInput = (e) => {
+    if (e.key === "Enter") {
+      const inputVal = inputRef.current.value.trim();
+      setValue([...value, inputVal]);
+      inputRef.current.value = "";
+    }
+  };
+
+  const memoizedValue = useMemo(() => value, [value]);
   return (
-    <div style={{ display: 'flex' }}>
-      <div>
-        {state < 10 ? <LifecycleComponent /> : <p>...</p>}
-        <p>{state}</p>
-        <button onClick={() => setState((state) => state + 1)}>
-          componentWillUnmount
-        </button>
-      </div>
-      <div>
-        {state2 < 10 ? <LifecycleComponent2 /> : <p>...</p>}
-        <p>{state2}</p>
-        <button onClick={() => setState2((state2) => state2 + 1)}>
-          componentWillUnmount
-        </button>
-      </div>
-    </div>
+    <>
+      <input ref={inputRef} onKeyDown={changeInput} />
+      <button
+        onClick={() => {
+          valid();
+        }}
+      >
+        Фокус
+      </button>
+      <List arrValue={memoizedValue} setArrValue={setValue} />
+    </>
   );
 }
 
