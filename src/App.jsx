@@ -12,7 +12,7 @@ function App() {
 
   const items = useMemo(() => Array.from({ length: 150 }, (_, i) => `элемент ${i + 1}`), []);
 
-  const onClick = useCallback(() => {
+  const changeCount = useCallback(() => {
     setCount((prev) => prev + 1);
   }, [count]);
 
@@ -23,7 +23,7 @@ function App() {
   return (
     <div style={{ display: "grid" }}>
       <p>{count}</p>
-      <CounterButton onClick={onClick} />
+      <CounterButton onClick={changeCount} />
       <SearchInput handleChange={handleChange} />
       <ItemList items={items} search={search} />
     </div>

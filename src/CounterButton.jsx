@@ -1,9 +1,5 @@
-const CounterButton = ({ onClick }) => {
-  return (
-    <>
-      <button onClick={onClick}>Increase</button>
-    </>
-  );
+const CounterButton = ({ changeCount }) => {
+  return <button onClick={changeCount}>Increase</button>;
 };
 
 export default CounterButton;
