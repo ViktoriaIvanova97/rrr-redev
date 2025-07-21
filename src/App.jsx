@@ -23,7 +23,7 @@ function App() {
   return (
     <div style={{ display: "grid" }}>
       <p>{count}</p>
-      <CounterButton onClick={changeCount} />
+      <CounterButton clickButton={changeCount} />
       <SearchInput handleChange={handleChange} />
       <ItemList items={items} search={search} />
     </div>
