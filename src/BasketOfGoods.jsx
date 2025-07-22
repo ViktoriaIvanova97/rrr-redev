@@ -1,5 +1,6 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useCallback } from "react";
+import CartItem from "./CartItem";
 
 const BasketOfGoods = () => {
   const [cart, setCart] = useState([
@@ -32,32 +33,12 @@ const BasketOfGoods = () => {
     >
       <h3>Корзина товаров</h3>
       {cart.map((el) => (
-        <div
+        <CartItem
+          el={el}
           key={el.id}
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            gap: "10px",
-          }}
-        >
-          <p>
-            {el.title} (Кол-во : {el.count})
-          </p>
-          <button
-            onClick={() => {
-              incrementCount(el.id);
-            }}
-          >
-            +1
-          </button>
-          <button
-            onClick={() => {
-              removeItem(el.id);
-            }}
-          >
-            Удалить
-          </button>
-        </div>
+          incrementCount={incrementCount}
+          removeItem={removeItem}
+        />
       ))}
       <button onClick={clearCart}>Очистить корзину</button>
     </div>

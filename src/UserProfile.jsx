@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import UserInfo from "./UserInfo";
 
 const UserProfile = () => {
   const [user, setUser] = useState({
@@ -35,11 +36,7 @@ const UserProfile = () => {
       }}
     >
       <h3>Профиль пользователя</h3>
-      <div>
-        <p>Имя: {user.name}</p>
-        <p>Врзраст: {user.age}</p>
-        <p>Активен: {user.isActive ? "да" : "нет"}</p>
-      </div>
+      <UserInfo infoUser={user} />
       <div style={{ display: "grid", gap: "10px" }}>
         <button onClick={changeName}>Сменить имя</button>
         <button onClick={changeAge}>Увеличить возраст</button>

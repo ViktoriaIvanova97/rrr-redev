@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import TaskItem from "./TaskItem";
 
 const TaskList = () => {
   const [tasks, setTasks] = useState(["Купить хлеб", "Погулять с собакой"]);
@@ -10,10 +11,11 @@ const TaskList = () => {
       setTasks((prev) => [...prev, newTask]);
     }
   };
-  console.log(tasks);
+
   const deleteTask = () => {
     setTasks((prev) => prev.filter((el, index) => index !== prev.length - 1));
   };
+  
   return (
     <div
       style={{
@@ -27,8 +29,8 @@ const TaskList = () => {
     >
       <h3>Список задач</h3>
       <ul>
-        {tasks.map((el) => (
-          <li>{el}</li>
+        {tasks.map((task, index) => (
+          <TaskItem key={index} task={task} />
         ))}
       </ul>
       <div style={{ display: "grid", gap: "10px" }}>
