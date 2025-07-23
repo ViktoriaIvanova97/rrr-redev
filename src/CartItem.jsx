@@ -29,7 +29,7 @@ const CartItem = memo(({ el, incrementCount, removeItem }) => {
     </div>
   );
 }, (prevProps, nextProps) => {
-	return prevProps.el.count === nextProps
+	return prevProps.el.count === nextProps.el.count
 });
 
 export default CartItem;

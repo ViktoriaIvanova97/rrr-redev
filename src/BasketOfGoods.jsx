@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useCallback } from "react";
+import { useState} from "react";
 import CartItem from "./CartItem";
 
 const BasketOfGoods = () => {
