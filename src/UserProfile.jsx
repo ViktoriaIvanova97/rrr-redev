@@ -1,5 +1,5 @@
 import React from "react";
-import { useState} from "react";
+import { useState } from "react";
 import UserInfo from "./UserInfo";
 
 const UserProfile = () => {

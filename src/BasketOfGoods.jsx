@@ -1,5 +1,5 @@
 import React from "react";
-import { useState} from "react";
+import { useState } from "react";
 import CartItem from "./CartItem";
 
 const BasketOfGoods = () => {
@@ -10,7 +10,7 @@ const BasketOfGoods = () => {
 
   const incrementCount = (id) => {
     setCart((prev) =>
-      prev.map((el) => (el.id === id ? { ...el, count: el.count + 1 } : el))
+      prev.map((el) => (el.id === id ? { ...el, count: el.count + 1 } : el)),
     );
   };
 

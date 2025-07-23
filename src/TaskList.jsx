@@ -1,7 +1,6 @@
 import React from "react";
-import { useState} from "react";
+import { useState } from "react";
 import TaskItem from "./TaskItem";
-
 const TaskList = () => {
   const [tasks, setTasks] = useState(["Купить хлеб", "Погулять с собакой"]);
 
@@ -15,7 +14,7 @@ const TaskList = () => {
   const deleteTask = () => {
     setTasks((prev) => prev.filter((el, index) => index !== prev.length - 1));
   };
-  
+
   return (
     <div
       style={{
