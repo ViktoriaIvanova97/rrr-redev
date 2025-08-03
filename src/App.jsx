@@ -1,12 +1,14 @@
 import "./App.css";
 import DogsPro from "./DogsPro";
-import { ThemeProvider } from "./ThemeProvider";
+import { useState } from "react";
+import { ThemeContext } from "./ThemeContext";
 
 function App() {
+  const [isTheme, setIsTheme] = useState("light");
   return (
-    <ThemeProvider>
+    <ThemeContext.Provider value={{ isTheme, setIsTheme }}>
       <DogsPro />
-    </ThemeProvider>
+    </ThemeContext.Provider>
   );
 }
 

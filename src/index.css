@@ -3,7 +3,6 @@
   line-height: 1.5;
   font-weight: 400;
 
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -27,9 +26,18 @@ button {
   transition: border-color 0.25s;
 }
 
+.button--light {
+  background-color: #242424;
+  color: aliceblue;
+}
+
+.button--dark {
+  background-color: #f9f9f9;
+  color: #242424;
+}
 .theme {
-  display: grid;
   justify-items: center;
+  align-items: start;
   padding: 30px;
 }
 
@@ -40,14 +48,9 @@ button {
 .theme--dark {
   background-color: rgb(18, 18, 18);
   color: #f9f9f9;
+  height: 100vh;
 }
 
-.button--light {
-  background-color: #242424;
-  color: aliceblue;
-}
-
-.button--dark {
-  background-color: #f9f9f9;
-  color: #242424;
+body {
+  margin: 0;
 }

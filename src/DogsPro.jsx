@@ -41,6 +41,7 @@ const DogsPro = () => {
           const response = await res.json();
           setImg(response.message);
           setCount((prev) => prev + 1);
+          console.log(111);
         } else {
           const res = await fetch(
             `https://dog.ceo/api/breed/${selectedBreed}/images/random/${countBreed}`,
@@ -56,7 +57,6 @@ const DogsPro = () => {
 
     getOneBreed();
   }, [selectedBreed, countBreed]);
-
 
   const changeBreed = (e) => {
     setSelectedBreed(e.target.value);
@@ -74,19 +74,21 @@ const DogsPro = () => {
 
   return (
     <div className={` theme theme--${isTheme}`}>
-      <button className={`button--${isTheme}`} onClick={() => changeTheme()}>
-        Change Mode
-      </button>
-      <h1>Галерея собак</h1>
-      <p>Картинки обновлены {count} раз(а)</p>
-      <SelectedBreed
-        state={state}
-        selectedBreed={selectedBreed}
-        changeBreed={changeBreed}
-      />
-      <Input inputRef={inputRef} changeInput={changeInput} />
+      <div style={{display:'contents'}}>
+        <button className={`button--${isTheme}`} onClick={() => changeTheme()}>
+          Change Mode
+        </button>
+        <h1>Галерея собак</h1>
+        <p>Картинки обновлены {count} раз(а)</p>
+        <SelectedBreed
+          state={state}
+          selectedBreed={selectedBreed}
+          changeBreed={changeBreed}
+        />
+        <Input inputRef={inputRef} changeInput={changeInput} />
 
-      <ImageGallery img={img} selectedBreed={selectedBreed} />
+        <ImageGallery img={img} selectedBreed={selectedBreed} />
+      </div>
     </div>
   );
 };
