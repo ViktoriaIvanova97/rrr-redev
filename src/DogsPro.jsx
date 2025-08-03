@@ -1,8 +1,9 @@
 import React from "react";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
 import SelectedBreed from "./SelectedBreed";
 import Input from "./Input";
 import ImageGallery from "./GalleryImg";
+import { ThemeContext } from "./ThemeContext";
 
 const DogsPro = () => {
   const [state, setState] = useState([]);
@@ -12,6 +13,7 @@ const DogsPro = () => {
   const inputRef = useRef(null);
   const [countBreed, setCountBreed] = useState(3);
   const isFirstRun = useRef(true);
+  const { isTheme, setIsTheme } = useContext(ThemeContext);
 
   useEffect(() => {
     const getData = async () => {
@@ -30,31 +32,31 @@ const DogsPro = () => {
     const getOneBreed = async () => {
       try {
         if (isFirstRun.current) {
-          isFirstRun.current = false; 
+          isFirstRun.current = false;
           return;
         } else if (selectedBreed === "all" || selectedBreed === "") {
           const res = await fetch(
-            `https://dog.ceo/api/breeds/image/random/${countBreed}`
+            `https://dog.ceo/api/breeds/image/random/${countBreed}`,
           );
           const response = await res.json();
           setImg(response.message);
           setCount((prev) => prev + 1);
-          console.log("all");
         } else {
           const res = await fetch(
-            `https://dog.ceo/api/breed/${selectedBreed}/images/random/${countBreed}`
+            `https://dog.ceo/api/breed/${selectedBreed}/images/random/${countBreed}`,
           );
           const response = await res.json();
           setImg(response.message);
           setCount((prev) => prev + 1);
-          console.log("some");
         }
       } catch (error) {
         console.log(error);
       }
     };
+
     getOneBreed();
   }, [selectedBreed, countBreed]);
+
 
   const changeBreed = (e) => {
     setSelectedBreed(e.target.value);
@@ -66,8 +68,15 @@ const DogsPro = () => {
     setCountBreed(num);
   };
 
+  const changeTheme = () => {
+    setIsTheme(isTheme === "light" ? "dark" : "light");
+  };
+
   return (
-    <>
+    <div className={` theme theme--${isTheme}`}>
+      <button className={`button--${isTheme}`} onClick={() => changeTheme()}>
+        Change Mode
+      </button>
       <h1>Галерея собак</h1>
       <p>Картинки обновлены {count} раз(а)</p>
       <SelectedBreed
@@ -76,8 +85,9 @@ const DogsPro = () => {
         changeBreed={changeBreed}
       />
       <Input inputRef={inputRef} changeInput={changeInput} />
+
       <ImageGallery img={img} selectedBreed={selectedBreed} />
-    </>
+    </div>
   );
 };
 

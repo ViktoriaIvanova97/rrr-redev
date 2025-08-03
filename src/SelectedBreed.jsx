@@ -1,12 +1,10 @@
-
-
-const SelectedBreed = ({state,selectedBreed,changeBreed}) => {
-	return (
-		<>
-		<div style={{ display: "flex", alignItems: "center" }}>
+const SelectedBreed = ({ state, selectedBreed, changeBreed }) => {
+  return (
+    <>
+      <div style={{ display: "flex", alignItems: "center",gap: '20px' }}>
         <p>Порода</p>
         <select value={selectedBreed} onChange={changeBreed}>
-          <option value="all" >Все породы</option>
+          <option value="all">Все породы</option>
           {state.map((el) => (
             <option key={el} value={el}>
               {el}
@@ -14,8 +12,8 @@ const SelectedBreed = ({state,selectedBreed,changeBreed}) => {
           ))}
         </select>
       </div>
-		</>
-	)
-}
+    </>
+  );
+};
 
-export default SelectedBreed
+export default SelectedBreed;
