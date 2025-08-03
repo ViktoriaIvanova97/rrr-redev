@@ -1,14 +1,19 @@
 import "./App.css";
-import DogsPro from "./DogsPro";
-import { useState } from "react";
+import React from "react";
+import { useContext } from "react";
+import { ControlsPanel } from "./ControlsPanel";
+import { Header } from "./Header";
+import { UserProfile } from "./UserProfile";
 import { ThemeContext } from "./ThemeContext";
 
 function App() {
-  const [isTheme, setIsTheme] = useState("light");
+  const { theme } = useContext(ThemeContext);
   return (
-    <ThemeContext.Provider value={{ isTheme, setIsTheme }}>
-      <DogsPro />
-    </ThemeContext.Provider>
+    <div className={`theme theme--${theme}`}>
+      <ControlsPanel />
+      <Header />
+      <UserProfile />
+    </div>
   );
 }
 
