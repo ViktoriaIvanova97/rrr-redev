@@ -46,7 +46,7 @@ const MyComp = () => {
   };
 
   return (
-    <>
+    <div className="contentBlock">
       <h1>Галерея собак</h1>
       <p>Картинки обновлены {count} раз(-а)</p>
       <Controls
@@ -56,7 +56,7 @@ const MyComp = () => {
         setIsLoading={setIsLoading}
       />
       {isLoading ? <>Загрузка...</> : <ImageGallery images={state} />}
-    </>
+    </div>
   );
 };
 
