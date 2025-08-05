@@ -27,11 +27,11 @@ button {
 
 .button--light {
   background-color: #242424;
-  color: aliceblue;
+  color: #ffffff;
 }
 
 .button--dark {
-  background-color: aliceblue;
+  background-color: #ffffff;
   color: #242424;
 }
 .theme {
@@ -41,14 +41,14 @@ button {
 }
 
 .theme--light {
-  background-color: aliceblue;
+  background-color: #ffffff;
   color: rgba(26, 25, 25, 0.993);
   height: 100vh;
 }
 
 .theme--dark {
   background-color: rgba(26, 25, 25, 0.993);
-  color: aliceblue;
+  color: #ffffff;
   height: 100vh;
 }
 
