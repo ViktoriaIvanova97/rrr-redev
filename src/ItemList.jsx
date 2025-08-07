@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo,memo } from "react";
 
 const ItemList = ({ items, search }) => {
   const filteredItems = useMemo(() => {
@@ -14,4 +14,4 @@ const ItemList = ({ items, search }) => {
   );
 };
 
-export default ItemList;
+export default memo(ItemList);
