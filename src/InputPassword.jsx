@@ -1,9 +1,12 @@
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
 export const InputPassword = ({ register, errors }) => {
   return (
-    <div>
-      <input
+    <Box>
+      <TextField
         type="password"
-        placeholder="Password"
+        label="Password"
+        variant="outlined"
         {...register("password", {
           required: "Введите пароль ",
           minLength: {
@@ -15,8 +18,8 @@ export const InputPassword = ({ register, errors }) => {
             message: "Пароль должен содержать хотя бы одну заглавную букву",
           },
         })}
+        helperText={errors.password?.message}
       />
-      <p>{errors.password?.message}</p>
-    </div>
+    </Box>
   );
 };

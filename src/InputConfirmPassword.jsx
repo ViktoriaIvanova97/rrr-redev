@@ -1,16 +1,19 @@
-export const InputConfirmPassword = ({ register, errors ,getValues}) => {
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
+export const InputConfirmPassword = ({ register, errors, getValues }) => {
   return (
-    <div>
-      <input
+    <Box>
+      <TextField
         type="password"
-        placeholder="Confirm password"
+        label="Confirm Password"
+        variant="outlined"
         {...register("confirmPassword", {
           required: "Подтвердите пароль ",
           validate: (value) =>
             value === getValues("password") || "Пароли не совпадают",
         })}
+        helperText={errors.confirmPassword?.message}
       />
-      <p>{errors.confirmPassword?.message}</p>
-    </div>
+    </Box>
   );
 };

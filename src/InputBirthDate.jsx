@@ -1,12 +1,15 @@
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
 export const InputBirthDate = ({ register, errors }) => {
   return (
-    <div>
-      <input
+    <Box sx={{ width: '222px' }}>
+      <TextField
         type="date"
-        placeholder="birth Date"
+        variant="outlined"
+        fullWidth
         {...register("birthDate", { required: "Введите дату рождения " })}
+        helperText={errors.birthDate?.message}
       />
-      <p>{errors.birthDate?.message}</p>
-    </div>
+    </Box>
   );
 };

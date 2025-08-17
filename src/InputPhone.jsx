@@ -1,12 +1,14 @@
+import { Box, TextField } from "@mui/material";
 export const InputPhone = ({ register, errors }) => {
   return (
-    <div>
-      <input
+    <Box>
+      <TextField
         type="tel"
-        placeholder="Phone"
+        label="Phone"
+        variant="outlined"
         {...register("phone", { required: "Введите номер телефона" })}
+        helperText={errors.phone?.message}
       />
-      <p>{errors.phone?.message}</p>
-    </div>
+    </Box>
   );
 };

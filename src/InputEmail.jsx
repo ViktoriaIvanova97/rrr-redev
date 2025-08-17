@@ -1,9 +1,11 @@
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
 export const InputEmail = ({ register, errors }) => {
   return (
-    <div>
-      <input
-        type="email"
-        placeholder="Email"
+    <Box>
+      <TextField
+        label="email"
+        variant="outlined"
         {...register("email", {
           required: "Введите email",
           pattern: {
@@ -11,8 +13,8 @@ export const InputEmail = ({ register, errors }) => {
             message: "Введите корректный email",
           },
         })}
+        helperText={errors.email?.message}
       />
-      <p>{errors.email?.message}</p>
-    </div>
+    </Box>
   );
 };
