@@ -16,9 +16,9 @@ function MainPage() {
   } = theme.useToken();
   return (
     <Layout style={{ height: "100%", background: "#C88E9D" }}>
-      <Sider trigger={null} style={{ background: "#C88E9D" }}>
+      <Sider trigger={null} style={{ background: "#C88E9D"}}>
         <Menu
-          style={{ height: "100vh", background: "#C88E9D" }}
+          style={{ height: "100vh", background: "#C88E9D"}}
           // theme="dark"
           mode="inline"
           defaultSelectedKeys={["1"]}

@@ -103,7 +103,7 @@ state.count = 10;`}
         <SyntaxHighlighter language="javascript" style={okaidia}>
           {`setCount((prevCount) => prevCount + 1);`}
         </SyntaxHighlighter>
-        <div style={{display:'flex',alignItems: 'center', gap:'10px'}}>
+        <div className="lamp">
           <img src="/lamp.png" alt="" />
           <p>
             Этот подход гарантирует, что изменения будут выполнены корректно.
@@ -111,7 +111,7 @@ state.count = 10;`}
         </div>
         <h3>Обрати внимание ещё раз — это важно!</h3>
         <p>Функция-setter (например setState) - асинхронная операция!</p>
-        <div style={{display:'flex',alignItems: 'center', gap:'10px'}}>
+        <div className="lamp">
           <img src="/lamp.png" alt="" />
           <p>
             Когда мы вызываем setState, React не обновляет состояние и не
@@ -337,7 +337,7 @@ const Example = () => {
           для изменения значения state. Мы используем объект style для установки
           цвета текста, который зависит от значения state.
         </p>
-        <div style={{display:'flex',alignItems: 'center', gap:'10px'}}>
+        <div className="lamp">
           <img src="/lamp.png" alt="" />
           <p>State можно передавать в дочерние компоненты при помощи props.</p>
         </div>
