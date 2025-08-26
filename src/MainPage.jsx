@@ -4,7 +4,7 @@ import { Routes, Route, NavLink, Navigate } from "react-router";
 import { Components } from "./Components";
 import { Props } from "./Props";
 import { State } from "./State";
-import { LifeCycle } from "./Lifecycle";
+import { LifeCycle } from "./LifeCycle";
 import { Events } from "./Events";
 import { Key } from "./Key";
 import { Layout, Menu, theme } from "antd";
