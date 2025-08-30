@@ -121,7 +121,7 @@ function MainPage() {
             <Route path="/reactMemo" element={<ReactMemo />} />
             <Route path="/useEffect" element={<UseEffect />} />
             <Route path="/useMemo" element={<UseMemo />} />
-            <Route path="/router" element={<ReactRouter />} />
+            <Route path="/reactRouter" element={<ReactRouter />} />
             <Route path="/form" element={<Form />} />
           </Routes>
         </Content>
