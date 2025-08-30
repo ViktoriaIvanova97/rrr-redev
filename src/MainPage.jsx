@@ -7,8 +7,17 @@ import { State } from "./State";
 import { LifeCycle } from "./LifeCycle";
 import { Events } from "./Events";
 import { Key } from "./Key";
+import { Refs } from "./Refs";
+import { Async } from "./Async";
+import { VirtualDOM } from "./VirtualDOM";
+import { Fragment } from "./Fragment";
+import { Form } from "./Form";
+import { ReactMemo } from "./ReactMemo";
+import { UseEffect } from "./UseEffect";
+import { UseMemo } from "./UseMemo";
+import { ReactRouter } from "./ReactRouter";
 import { Layout, Menu, theme } from "antd";
-const { Header, Sider, Content } = Layout;
+const { Sider, Content } = Layout;
 
 function MainPage() {
   const {
@@ -16,9 +25,9 @@ function MainPage() {
   } = theme.useToken();
   return (
     <Layout style={{ height: "100%", background: "#C88E9D" }}>
-      <Sider trigger={null} style={{ background: "#C88E9D"}}>
+      <Sider trigger={null} style={{ background: "#C88E9D" }}>
         <Menu
-          style={{ height: "100vh", background: "#C88E9D"}}
+          style={{ height: "100vh", background: "#C88E9D" }}
           // theme="dark"
           mode="inline"
           defaultSelectedKeys={["1"]}
@@ -47,6 +56,42 @@ function MainPage() {
               key: "6",
               label: <NavLink to={"/mainPage/key"}>Key</NavLink>,
             },
+            {
+              key: "7",
+              label: <NavLink to={"/mainPage/refs"}>Refs</NavLink>,
+            },
+            {
+              key: "8",
+              label: <NavLink to={"/mainPage/async"}>Async</NavLink>,
+            },
+            {
+              key: "9",
+              label: <NavLink to={"/mainPage/virtualDOM"}>VirtualDOM</NavLink>,
+            },
+            {
+              key: "10",
+              label: <NavLink to={"/mainPage/fragment"}>Fragment</NavLink>,
+            },
+            {
+              key: "11",
+              label: <NavLink to={"/mainPage/reactMemo"}>React.Memo</NavLink>,
+            },
+            {
+              key: "12",
+              label: <NavLink to={"/mainPage/useEffect"}>useEffect</NavLink>,
+            },
+            {
+              key: "13",
+              label: <NavLink to={"/mainPage/useMemo"}>useMemo</NavLink>,
+            },
+            {
+              key: "14",
+              label: <NavLink to={"/mainPage/reactRouter"}>Router</NavLink>,
+            },
+            {
+              key: "15",
+              label: <NavLink to={"/mainPage/form"}>Form</NavLink>,
+            },
           ]}
         />
       </Sider>
@@ -59,13 +104,25 @@ function MainPage() {
           }}
         >
           <Routes>
-            <Route path="/" element={<Navigate to="/mainPage/components" replace />} />
+            <Route
+              path="/"
+              element={<Navigate to="/mainPage/components" replace />}
+            />
             <Route path="/components" element={<Components />} />
             <Route path="/props" element={<Props />} />
             <Route path="/state" element={<State />} />
             <Route path="/lifecycle" element={<LifeCycle />} />
             <Route path="/events" element={<Events />} />
             <Route path="/key" element={<Key />} />
+            <Route path="/refs" element={<Refs />} />
+            <Route path="/async" element={<Async />} />
+            <Route path="/virtualDOM" element={<VirtualDOM />} />
+            <Route path="/fragment" element={<Fragment />} />
+            <Route path="/reactMemo" element={<ReactMemo />} />
+            <Route path="/useEffect" element={<UseEffect />} />
+            <Route path="/useMemo" element={<UseMemo />} />
+            <Route path="/router" element={<ReactRouter />} />
+            <Route path="/form" element={<Form />} />
           </Routes>
         </Content>
       </Layout>
