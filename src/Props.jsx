@@ -1,7 +1,6 @@
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { okaidia } from "react-syntax-highlighter/dist/esm/styles/prism";
 export const Props = () => {
-  console.log('props');
   return (
     <div
       className="fonts"
