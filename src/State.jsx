@@ -104,7 +104,7 @@ state.count = 10;`}
           {`setCount((prevCount) => prevCount + 1);`}
         </SyntaxHighlighter>
         <div className="lamp">
-          <img src="/lamp.png" alt="" />
+          <img src="lamp.png" alt="" />
           <p>
             Этот подход гарантирует, что изменения будут выполнены корректно.
           </p>
@@ -112,7 +112,7 @@ state.count = 10;`}
         <h3>Обрати внимание ещё раз — это важно!</h3>
         <p>Функция-setter (например setState) - асинхронная операция!</p>
         <div className="lamp">
-          <img src={`${process.env.PUBLIC_URL}/lamp.png`} alt="" />
+          <img src="lamp.png" alt="" />
           <p>
             Когда мы вызываем setState, React не обновляет состояние и не
             рендерит компонент немедленно. Вместо этого он помещает обновление в
@@ -338,7 +338,7 @@ const Example = () => {
           цвета текста, который зависит от значения state.
         </p>
         <div className="lamp">
-          <img src="/lamp.png" alt="" />
+          <img src="lamp.png" alt="" />
           <p>State можно передавать в дочерние компоненты при помощи props.</p>
         </div>
         <SyntaxHighlighter language="javascript" style={okaidia}>

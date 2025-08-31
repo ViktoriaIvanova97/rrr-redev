@@ -15,7 +15,7 @@ export const Refs = () => {
       }}
     >
       <div className="bulavka">
-        <img src={`${process.env.PUBLIC_URL}/molnia.png`} alt="" />
+        <img src="molnia.png" alt="" />
         <h2>Refs в React</h2>
       </div>
       <div className="border">
@@ -59,7 +59,7 @@ function MyInput() {
       </div>
       <div className="border">
         <div className="bulavka">
-          <img src={`${process.env.PUBLIC_URL}/lamp.png`} alt="" />
+          <img src="lamp.png" alt="" />
           <h3>Когда использовать Refs</h3>
         </div>
         <ul>

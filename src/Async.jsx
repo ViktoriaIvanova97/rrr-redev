@@ -15,7 +15,7 @@ export const Async = () => {
       }}
     >
       <div className="bulavka">
-        <img src={`${process.env.PUBLIC_URL}/molnia.png`} alt="" />
+        <img src="molnia.png" alt="" />
         <h2>Async / Await в JS</h2>
       </div>
       <div className="border">
@@ -81,7 +81,7 @@ getNumber().then(num => console.log(num)); // 5
       </div>
       <div className="border">
         <div className="bulavka">
-          <img src={`${process.env.PUBLIC_URL}/lamp.png`} alt="" />
+          <img src="lamp.png" alt="" />
           <h3>Важно помнить:</h3>
         </div>
         <ul>

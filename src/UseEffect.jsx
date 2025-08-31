@@ -15,7 +15,7 @@ export const UseEffect = () => {
       }}
     >
       <div className="bulavka">
-        <img src={`${process.env.PUBLIC_URL}/molnia.png`} alt="" />
+        <img src="molnia.png"alt="" />
         <h2>useEffect</h2>
       </div>
       <div className="border">
@@ -85,7 +85,7 @@ useEffect(() => {
       </div>
       <div className="border">
         <div className="bulavka">
-          <img src={`${process.env.PUBLIC_URL}/lamp.png`} alt="" />
+          <img src="lamp.png "alt="" />
           <h3>На что обратить внимание</h3>
         </div>
         <ul>

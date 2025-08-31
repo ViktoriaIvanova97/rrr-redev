@@ -10,13 +10,13 @@ export const ButtonTheme = () => {
     >
      {theme === "light" ? (
   <img
-    src={`${process.env.PUBLIC_URL}/darkMode1.png`}
+    src="darkMode1.png"
     alt="theme icon"
     width="50"
   />
 ) : (
   <img
-    src={`${process.env.PUBLIC_URL}/lightMode.png`}
+    src="lightMode.png"
     alt="theme icon"
     width="50"
   />

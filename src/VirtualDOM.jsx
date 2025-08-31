@@ -15,7 +15,7 @@ export const VirtualDOM = () => {
       }}
     >
       <div className="bulavka">
-        <img src={`${process.env.PUBLIC_URL}/molnia.png`} alt="" />
+        <img src="molnia.png" alt="" />
         <h2>Virtual DOM в React</h2>
       </div>
       <div className="border">
@@ -62,7 +62,7 @@ export const VirtualDOM = () => {
       </div>
       <div className="border">
         <div className="bulavka">
-          <img src={`${process.env.PUBLIC_URL}/lamp.png`} alt="" />
+          <img src="lamp.png" alt="" />
           <h3>Важно помнить</h3>
         </div>
         <ul>

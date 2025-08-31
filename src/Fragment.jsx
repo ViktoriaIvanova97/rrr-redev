@@ -15,7 +15,7 @@ export const Fragment = () => {
       }}
     >
       <div className="bulavka">
-        <img src= {`${process.env.PUBLIC_URL}/molnia.png`} alt="" />
+        <img src= "molnia.png" alt="" />
         <h2>React Fragment</h2>
       </div>
       <div className="border">
@@ -73,7 +73,7 @@ export const Fragment = () => {
       </div>
       <div className="border">
         <div className="bulavka">
-          <img src={`${process.env.PUBLIC_URL}/lamp.png`}alt="" />
+          <img src="lamp.png"alt="" />
           <h3>Особенности</h3>
         </div>
         <ul>

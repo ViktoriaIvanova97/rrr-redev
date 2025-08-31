@@ -15,7 +15,7 @@ export const ReactMemo = () => {
       }}
     >
       <div className="bulavka">
-        <img src={`${process.env.PUBLIC_URL}/molnia.png`}alt="" />
+        <img src="molnia.png"alt="" />
         <h2>React.memo</h2>
       </div>
       <div className="border">
@@ -84,7 +84,7 @@ const Child = React.memo(({ value }) => {
       </div>
       <div className="border">
         <div className="bulavka">
-          <img src={`${process.env.PUBLIC_URL}/lamp.png`}alt="" />
+          <img src="lamp.png"alt="" />
           <h3>Когда использовать?</h3>
         </div>
         <ul>

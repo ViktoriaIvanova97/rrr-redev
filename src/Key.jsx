@@ -14,7 +14,7 @@ export const Key = () => {
       }}
     >
       <div className="bulavka">
-        <img src= {`${process.env.PUBLIC_URL}/molnia.png`} alt="" />
+        <img src= "molnia.png" alt="" />
         <h2>Key в React</h2>
       </div>
       <div className="border">
@@ -51,7 +51,7 @@ export const Key = () => {
       </div>
       <div className="border">
         <div className="bulavka">
-          <img src={`${process.env.PUBLIC_URL}/lamp.png`}alt="" />
+          <img src="lamp.png"alt="" />
           <p>
             Если удалить второго пользователя, React подставит старые данные на
             новые места, и, например, input внутри li собьётся.
