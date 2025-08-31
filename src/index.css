@@ -4,7 +4,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(255, 255, 255);
   background-color: #242424;
 
   font-synthesis: none;
@@ -59,7 +59,7 @@ button:focus-visible {
   }
 }
 .fonts {
-  color: #433835;
+  /* color: #433835; */
   font-weight: 500;
   font-size: larger;
 }
@@ -79,7 +79,51 @@ h2 {
   flex-direction: column;
   align-items: center;
 }
-.navStyle {
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.buttonTheme,
+.buttonTheme:focus,
+.buttonTheme:active {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;   
+  box-shadow: none; 
+}
+
+.light-theme{
+  background-color: #ffffff;
+  color: #121212;
+}
+
+.light-theme nav {
+  background: #c88e9d;
+  color: #121212;
+}
+
+
+
+/* Тёмная тема */
+
+.dark-theme  {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+.dark-theme p  {
+
+  color: #f5f5f5;
+}
+
+.dark-theme a {
+  color: #c88e9d;
+}
+
+
+.light {
   width: 100%;
   height: 60px;
   display: flex;
@@ -87,6 +131,45 @@ h2 {
   justify-content: space-around;
   background: #c88e9d;
 }
+
+.dark {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #131111;
+}
+
+.light-theme .ant-layout-sider {
+  background: #c88e9d !important;
+}
+.light-theme .ant-menu {
+  background: #c88e9d !important;
+  color: #121212 !important;
+}
+.light-theme .ant-layout-content {
+  background: #ffffff !important;
+  color: #121212 !important;
+}
+
+
+.dark-theme .ant-layout-sider {
+  background: #121212 !important;
+}
+.dark-theme .ant-menu {
+  background: #121212 !important;
+  color: #f5f5f5 !important;
+}
+.dark-theme .ant-menu-item a {
+  color: #c88e9d !important;
+}
+.dark-theme .ant-layout-content {
+  background: #1e1e1e !important;
+  color: #f5f5f5 !important;
+}
+
+
 .homeMainBlock {
   display: flex;
   flex-direction: column;
@@ -107,8 +190,10 @@ h2 {
   justify-content: center;
   color: #c88e9d;
 }
+
+
+
 .bulavka {
-  /* border: double; */
   display: flex;
   align-items: center;
   gap: 10px;

@@ -1,6 +1,7 @@
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { okaidia } from "react-syntax-highlighter/dist/esm/styles/prism";
 export const Props = () => {
+  console.log('props');
   return (
     <div
       className="fonts"
@@ -192,7 +193,7 @@ function App() {
   return (
     <div className="product-card">
       <h2>{name}</h2>
-      <p>\Price: \${price}\</p>
+      <p>Price: \${price}</p>
       <p>{inStock ? "In Stock" : "Out of Stock"}</p>
     </div>
   );

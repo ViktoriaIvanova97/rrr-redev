@@ -58,7 +58,7 @@ class Example extends React.Component {
 
   componentDidMount() {
     console.log("4. componentDidMount");
-    document.title = \`Clicked \${this.state.count}\ times\`;
+    document.title = \`Clicked \${this.state.count} times\`;
   }
 
   render() {

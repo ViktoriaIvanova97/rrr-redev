@@ -128,7 +128,7 @@ function InputExample() {
 `}
         </SyntaxHighlighter>
         <div className="bulavka">
-          <img src="" alt="" />
+          <img src="/lamp.png" alt="" />
           <h3>Дополнительно: Передача параметров в обработчик</h3>
         </div>
         <SyntaxHighlighter language="javascript" style={okaidia}>
