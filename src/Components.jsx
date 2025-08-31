@@ -24,7 +24,7 @@ export const Components = () => {
           отдельности**. Например, всем известный интерфейс можно разбить на
           такие компоненты:
           <div className="img">
-            <img src="/components-1.webp" alt="" width={"60%"} />
+            <img src={`${process.env.PUBLIC_URL}/components-1.webp`} alt="" width={"60%"} />
           </div>
         </p>
         <p>
@@ -46,7 +46,7 @@ export const Components = () => {
           </li>
         </ul>
         <div className="img">
-          <img src="/components-2.jpeg" alt="" width={"30%"} />
+          <img src={`${process.env.PUBLIC_URL}/components-2.jpeg`}alt="" width={"30%"} />
         </div>
       </div>
 

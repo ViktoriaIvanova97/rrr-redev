@@ -43,7 +43,7 @@ export const LifeCycle = () => {
           </li>
         </ul>
         <div className="bulavka">
-          <img src="/bulavka.png" alt="" />
+          <img src={`${process.env.PUBLIC_URL}/bulavka.png`} alt="" />
           <p>Пример (class component)</p>{" "}
         </div>
         <SyntaxHighlighter language="javascript" style={okaidia}>
@@ -75,7 +75,7 @@ class Example extends React.Component {
 }`}
         </SyntaxHighlighter>
         <div className="bulavka">
-          <img src="/bulavka.png" alt="" />
+          <img src={`${process.env.PUBLIC_URL}/bulavka.png`} alt="" />
           <p>Аналог на хуках</p>
         </div>
 
@@ -121,7 +121,7 @@ function Example() {
           </li>
         </ul>
         <div className="bulavka">
-          <img src="/bulavka.png" alt="" />
+          <img src={`${process.env.PUBLIC_URL}/bulavka.png`}alt="" />
           <p>Пример (class component)</p>
         </div>
 
@@ -146,7 +146,7 @@ function Example() {
 `}
         </SyntaxHighlighter>
         <div className="bulavka">
-          <img src="/bulavka.png" alt="" />
+          <img src={`${process.env.PUBLIC_URL}/bulavka.png`} alt="" />
           <p>Аналог на хуках</p>
         </div>
         <SyntaxHighlighter language="javascript" style={okaidia}>
@@ -173,7 +173,7 @@ function Counter() {
             используют для очистки таймеров, слушателей).
           </li>
           <div className="bulavka">
-            <img src="/bulavka.png" alt="" />
+            <img src={`${process.env.PUBLIC_URL}/bulavka.png`}alt="" />
             <p>Пример (class component)</p>
           </div>
           <SyntaxHighlighter language="javascript" style={okaidia}>
@@ -194,7 +194,7 @@ function Counter() {
 `}
           </SyntaxHighlighter>
           <div className="bulavka">
-            <img src="/bulavka.png" alt="" />
+            <img src={`${process.env.PUBLIC_URL}/bulavka.png`} alt="" />
             <p>Аналог на хуках</p>
           </div>
           <SyntaxHighlighter language="javascript" style={okaidia}>
@@ -219,7 +219,7 @@ function Timer() {
       </div>
       <div className="border">
         <div className="bulavka">
-          <img src="/molnia.png" alt="" />
+          <img src={`${process.env.PUBLIC_URL}/molnia.png`} alt="" />
           <p>Итого:</p>
         </div>
         <ul>

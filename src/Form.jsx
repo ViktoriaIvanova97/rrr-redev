@@ -15,7 +15,7 @@ export const Form = () => {
       }}
     >
       <div className="bulavka">
-        <img src="/molnia.png" alt="" />
+        <img src={`${process.env.PUBLIC_URL}/molnia.png`} alt="" />
         <h2>Form (Формы в React)</h2>
       </div>
       <div className="border">
@@ -100,7 +100,7 @@ function LoginForm() {
       </div>
       <div className="border">
         <div className="bulavka">
-          <img src="/lamp.png" alt="" />
+          <img src={`${process.env.PUBLIC_URL}/lamp.png`}alt="" />
           <h3>На что обратить внимание</h3>
         </div>
         <ul>

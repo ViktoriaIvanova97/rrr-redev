@@ -14,7 +14,7 @@ export const Events = () => {
       }}
     >
       <div className="bulavka">
-        <img src="/lamp.png" alt="" />
+        <img src={`${process.env.PUBLIC_URL}/lamp.png`} alt="" />
         <h2>Events в React</h2>
       </div>
       <p>
@@ -24,7 +24,7 @@ export const Events = () => {
       </p>
       <div className="border">
         <div className="bulavka">
-          <img src="/bulavka.png" alt="" />
+          <img src={`${process.env.PUBLIC_URL}/bulavka.png`}alt="" />
           <p>Особенности:</p>
         </div>
         <ul>
@@ -41,7 +41,7 @@ export const Events = () => {
       </div>
       <div className="border">
         <div className="bulavka">
-          <img src="/molnia.png" alt="" />
+          <img src={`${process.env.PUBLIC_URL}/molnia.png`}alt="" />
           <p>Примеры событий</p>
         </div>
         <h3>1. Click (клик по кнопке)</h3>
@@ -128,7 +128,7 @@ function InputExample() {
 `}
         </SyntaxHighlighter>
         <div className="bulavka">
-          <img src="/lamp.png" alt="" />
+          <img src={`${process.env.PUBLIC_URL}/lamp.png`}alt="" />
           <h3>Дополнительно: Передача параметров в обработчик</h3>
         </div>
         <SyntaxHighlighter language="javascript" style={okaidia}>
@@ -149,7 +149,7 @@ function InputExample() {
       </div>
       <div className="border">
         <div className="bulavka">
-          <img src="/molnia.png" alt="" />
+          <img src={`${process.env.PUBLIC_URL}/molnia.png`} alt="" />
           <p>Итого:</p>
         </div>
         <ul>

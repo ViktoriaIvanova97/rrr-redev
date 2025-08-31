@@ -112,7 +112,7 @@ state.count = 10;`}
         <h3>Обрати внимание ещё раз — это важно!</h3>
         <p>Функция-setter (например setState) - асинхронная операция!</p>
         <div className="lamp">
-          <img src="/lamp.png" alt="" />
+          <img src={`${process.env.PUBLIC_URL}/lamp.png`} alt="" />
           <p>
             Когда мы вызываем setState, React не обновляет состояние и не
             рендерит компонент немедленно. Вместо этого он помещает обновление в
