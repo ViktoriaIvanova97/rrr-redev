@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Context } from "./Contex";
 
 const TasksFilter = () => {
-  const { filter, setFilter } = useContext(Context);
+  const { setFilter } = useContext(Context);
 
   return (
     <div>

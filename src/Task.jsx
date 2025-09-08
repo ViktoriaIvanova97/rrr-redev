@@ -30,7 +30,7 @@ const Task = ({ task }) => {
         />
       )}
       <button onClick={() => setEdit((edit) => !edit)}>Изменить</button>
-      <button onClick={() => deleteTask(task.id)}>X</button>
+      <button onClick={() => deleteTask(task.id)}>&times;</button>
     </div>
   );
 };

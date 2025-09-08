@@ -1,11 +1,25 @@
 import { Context } from "./Contex";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const ContextProvider = ({ children }) => {
-  const [tasks, setTasks] = useState([
-    { id: 1, title: "купить ", isDone: false },
-  ]);
-  const [filter, setFilter] = useState("all");
+  const [tasks, setTasks] = useState(() => {
+    const saved = localStorage.getItem("tasks");
+    return saved ? JSON.parse(saved) : [];
+  });
+
+  const [filter, setFilter] = useState(() => {
+    const saved = localStorage.getItem("filter");
+    return saved ? saved : "all";
+  });
+
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
+
+  useEffect(() => {
+    localStorage.setItem("filter", filter);
+  }, [filter]);
+
   console.log(tasks);
   const deleteTask = (id) => {
     setTasks((tasks) => tasks.filter((item) => item.id !== id));
