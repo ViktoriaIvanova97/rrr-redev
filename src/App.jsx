@@ -3,7 +3,7 @@ import ContextProvider from "./ContextProvider";
 import { Context } from "./Contex";
 import Input from "./Input";
 import TasksList from "./TasksList";
-import { useContext } from "react";
+import TasksFilter from "./TaskFilter";
 
 function App() {
 
@@ -13,6 +13,7 @@ function App() {
         <h2>To-Do List</h2>
         <Input/>
         <TasksList />
+        <TasksFilter />
       </div>
     </ContextProvider>
   );
