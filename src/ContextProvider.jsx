@@ -5,12 +5,23 @@ const ContextProvider = ({ children }) => {
   const [tasks, setTasks] = useState([
     { id: 1, title: "купить ", isDone: false },
   ]);
+
   const deleteTask = (id) => {
-    setTasks(tasks.filter((item) => item.id !== id));
-  };
-	return <Context.Provider value={{tasks,setTasks,deleteTask}}>
-		{children}
-	</Context.Provider>;
+    setTasks(tasks=>tasks.filter((item) => item.id !== id));
+	};
+
+	const isDoneChecked = (id) => {
+		setTasks(tasks=>tasks.map(item=>item.id ===id? {...item, isDone: !item.isDone}: item))
+	}
+	const editTitle = (id,newTitle) => {
+		setTasks(tasks=>tasks.map(item=>item.id ===id? {...item, title: newTitle}: item))
+	}
+
+  return (
+    <Context.Provider value={{ tasks, setTasks, deleteTask ,isDoneChecked,editTitle}}>
+      {children}
+    </Context.Provider>
+  );
 };
 
 export default ContextProvider;

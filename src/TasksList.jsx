@@ -1,13 +1,14 @@
 import Task from "./Task";
 import { useContext } from "react";
 import { Context } from "./Contex";
+
 const TasksList = () => {
-	const {tasks,deleteTask} =useContext(Context)
+	const {tasks} =useContext(Context)
   return (
     <>
-      {tasks.map((item) => (
-		  <Task key={item.id} task={item} deleteTask={deleteTask} />
-      ))}
+      {tasks?tasks.map((item) => (
+		  <Task key={item.id} task={item} />
+      )): <p>Пусто</p>}
     </>
   );
 };

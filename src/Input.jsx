@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useContext } from "react";
 import { Context } from "./Contex";
+
 const Input = () => {
   const { setTasks } = useContext(Context);
   const [text, setText] = useState("");
@@ -11,7 +12,7 @@ const Input = () => {
   const handleTasks = () => {
     setTasks((tasks) => [
       ...tasks,
-      { id: tasks.at(-1).id + 1, title: text, isDone: false },
+      { id: crypto.randomUUID(), title: text, isDone: false },
     ]);
   };
   return (
