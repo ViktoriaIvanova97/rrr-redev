@@ -5,7 +5,7 @@ const CountActive = () => {
   const { tasks } = useContext(Context);
   const count = tasks.filter((item) => !item.isDone).length;
   return (
-    <div>
+    <div >
       <p>Осталось дел: {count}</p>
     </div>
   );

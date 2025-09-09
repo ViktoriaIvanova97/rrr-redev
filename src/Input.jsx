@@ -33,7 +33,7 @@ const Input = () => {
   };
 
   return (
-    <div style={{ marginBottom: "10px" }}>
+    <div className="style">
       <input
         value={text}
         onChange={handleChange}

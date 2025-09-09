@@ -14,11 +14,20 @@ const TasksList = () => {
 
   return (
     <div>
-      <SortTask/>
+      <SortTask />
       {filteredTasks.length > 0 ? (
         filteredTasks.map((item) => <Task key={item.id} task={item} />)
       ) : (
-        <p>Пусто</p>
+        <p
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            color: "#333",
+            fontWeight: " 500",
+          }}
+        >
+          Пусто
+        </p>
       )}
     </div>
   );

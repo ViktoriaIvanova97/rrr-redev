@@ -5,7 +5,7 @@ const DeleteCompleted = () => {
   const { setTasks } = useContext(Context);
 
   return (
-    <>
+    < div >
       <button
         onClick={() =>
           setTasks((tasks) => tasks.filter((item) => !item.isDone))
@@ -13,7 +13,7 @@ const DeleteCompleted = () => {
       >
         Очистить выполненные
       </button>
-    </>
+    </div>
   );
 };
 

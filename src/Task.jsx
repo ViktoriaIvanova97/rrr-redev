@@ -14,7 +14,7 @@ const Task = ({ task }) => {
     }
   };
   return (
-    <div style={{ display: "flex" }}>
+    <div className="style" style={{paddingTop:'10px'}}>
       <input
         type="checkbox"
         checked={task.isDone}
