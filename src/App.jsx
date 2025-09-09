@@ -5,6 +5,7 @@ import TasksList from "./TasksList";
 import TasksFilter from "./TaskFilter";
 import DeleteCompleted from "./DeleteCompleted";
 import CountActive from "./CountActive";
+import SortTask from "./SortTask";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <div>
         <h2>To-Do List</h2>
         <Input />
+        
         <TasksList />
         <TasksFilter />
         <DeleteCompleted />

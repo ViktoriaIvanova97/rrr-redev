@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { useContext } from "react";
+import { useState, useContext } from "react";
 import { Context } from "./Contex";
 
 const Input = () => {
@@ -11,29 +10,40 @@ const Input = () => {
     setText(e.target.value);
     if (error) setError("");
   };
+
   const handleTasks = () => {
     if (text.trim() === "") {
       setError("Поле не может быть пустым!");
       return;
     }
-    setTasks((tasks) => [
-      ...tasks,
-      { id: crypto.randomUUID(), title: text, isDone: false },
-    ]);
+
+    const newTask = {
+      id: Date.now(),
+      title: text,
+      isDone: false,
+      createdAt: Date.now(),
+    };
+
+    setTasks((tasks) => [...tasks, newTask]);
     setText("");
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") handleTasks();
+  };
+
   return (
-    <>
+    <div style={{ marginBottom: "10px" }}>
       <input
         value={text}
         onChange={handleChange}
+        onKeyDown={handleKeyPress}
         type="text"
         placeholder="Введите текст задачи..."
       />
-      <button onClick={() => handleTasks()}>Добавить</button>
+      <button onClick={handleTasks}>Добавить</button>
       {error && <p style={{ color: "red" }}>{error}</p>}
-    </>
+    </div>
   );
 };
 

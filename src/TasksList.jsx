@@ -1,6 +1,7 @@
 import Task from "./Task";
 import { useContext } from "react";
 import { Context } from "./Contex";
+import SortTask from "./SortTask";
 
 const TasksList = () => {
   const { tasks, filter } = useContext(Context);
@@ -10,14 +11,16 @@ const TasksList = () => {
     if (filter === "completedTask") return item.isDone;
     return true;
   });
+
   return (
-    <>
+    <div>
+      <SortTask/>
       {filteredTasks.length > 0 ? (
         filteredTasks.map((item) => <Task key={item.id} task={item} />)
       ) : (
         <p>Пусто</p>
       )}
-    </>
+    </div>
   );
 };
 
